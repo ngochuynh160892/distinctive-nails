@@ -66,6 +66,17 @@ function ensureLocalDirs() {
   mkdirSync(uploadsDir, { recursive: true });
 }
 
+function parseContent(data) {
+  if (typeof data === "string") {
+    try {
+      return JSON.parse(data);
+    } catch {
+      return defaultContent;
+    }
+  }
+  return data;
+}
+
 function readJson(file, fallback) {
   try {
     return JSON.parse(readFileSync(file, "utf8"));
@@ -89,12 +100,13 @@ export async function getContent() {
     const sql = getSql();
     await ensureSchema(sql);
     const rows = await sql`SELECT data FROM site_content WHERE id = 1`;
-    if (rows[0]?.data) return rows[0].data;
-    await sql(
-      `INSERT INTO site_content (id, data, updated_at) VALUES (1, $1::jsonb, NOW())
-       ON CONFLICT (id) DO NOTHING`,
-      [JSON.stringify(defaultContent)]
-    );
+    if (rows[0]?.data) return parseContent(rows[0].data);
+    const payload = JSON.stringify(defaultContent);
+    await sql`
+      INSERT INTO site_content (id, data, updated_at)
+      VALUES (1, CAST(${payload} AS jsonb), NOW())
+      ON CONFLICT (id) DO NOTHING
+    `;
     return defaultContent;
   }
 
@@ -114,12 +126,12 @@ export async function setContent(data) {
   if (hasPostgres()) {
     const sql = getSql();
     await ensureSchema(sql);
-    await sql(
-      `INSERT INTO site_content (id, data, updated_at)
-       VALUES (1, $1::jsonb, NOW())
-       ON CONFLICT (id) DO UPDATE SET data = EXCLUDED.data, updated_at = NOW()`,
-      [JSON.stringify(data)]
-    );
+    const payload = JSON.stringify(data);
+    await sql`
+      INSERT INTO site_content (id, data, updated_at)
+      VALUES (1, CAST(${payload} AS jsonb), NOW())
+      ON CONFLICT (id) DO UPDATE SET data = EXCLUDED.data, updated_at = NOW()
+    `;
     return;
   }
 
