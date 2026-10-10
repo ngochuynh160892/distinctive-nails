@@ -140,8 +140,8 @@ export function renderSite(content) {
           ? ""
           : `<section class="about" id="about">
         <div class="about-media">
-          <img class="about-photo about-photo-a" src="${escapeHtml(about.imageA)}" alt="${escapeHtml(about.imageAAlt)}" width="1200" height="900" loading="lazy" />
-          <img class="about-photo about-photo-b" src="${escapeHtml(about.imageB)}" alt="${escapeHtml(about.imageBAlt)}" width="800" height="1000" loading="lazy" />
+          <img class="about-photo about-photo-a" src="${escapeHtml(about.imageA)}" alt="${escapeHtml(about.imageAAlt)}" width="720" height="900" loading="lazy" />
+          <img class="about-photo about-photo-b" src="${escapeHtml(about.imageB)}" alt="${escapeHtml(about.imageBAlt)}" width="640" height="900" loading="lazy" />
         </div>
         <div class="about-copy">
           <p class="eyebrow">${escapeHtml(about.eyebrow)}</p>
