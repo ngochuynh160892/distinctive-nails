@@ -40,25 +40,28 @@ function getSql() {
 
 let schemaReady = false;
 
-async function ensureSchema(sql) {
-  if (schemaReady) return;
-  await sql`
-    CREATE TABLE IF NOT EXISTS site_content (
-      id INTEGER PRIMARY KEY,
-      data JSONB NOT NULL,
-      updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
-    )
-  `;
-  await sql`
-    CREATE TABLE IF NOT EXISTS site_auth (
-      username TEXT PRIMARY KEY,
-      salt TEXT NOT NULL,
-      hash TEXT NOT NULL,
-      secret TEXT NOT NULL,
-      updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
-    )
-  `;
-  schemaReady = true;
+async function db(text, params) {
+  const sql = getSql();
+  if (!schemaReady) {
+    await sql.query(`
+      CREATE TABLE IF NOT EXISTS site_content (
+        id INTEGER PRIMARY KEY,
+        data JSONB NOT NULL,
+        updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+      )
+    `);
+    await sql.query(`
+      CREATE TABLE IF NOT EXISTS site_auth (
+        username TEXT PRIMARY KEY,
+        salt TEXT NOT NULL,
+        hash TEXT NOT NULL,
+        secret TEXT NOT NULL,
+        updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+      )
+    `);
+    schemaReady = true;
+  }
+  return sql.query(text, params);
 }
 
 function ensureLocalDirs() {
@@ -97,16 +100,14 @@ function defaultAuth() {
 
 export async function getContent() {
   if (hasPostgres()) {
-    const sql = getSql();
-    await ensureSchema(sql);
-    const rows = await sql`SELECT data FROM site_content WHERE id = 1`;
+    const rows = await db("SELECT data FROM site_content WHERE id = 1");
     if (rows[0]?.data) return parseContent(rows[0].data);
-    const payload = JSON.stringify(defaultContent);
-    await sql`
-      INSERT INTO site_content (id, data, updated_at)
-      VALUES (1, CAST(${payload} AS jsonb), NOW())
-      ON CONFLICT (id) DO NOTHING
-    `;
+    await db(
+      `INSERT INTO site_content (id, data, updated_at)
+       VALUES (1, $1::jsonb, NOW())
+       ON CONFLICT (id) DO NOTHING`,
+      [JSON.stringify(defaultContent)]
+    );
     return defaultContent;
   }
 
@@ -124,14 +125,12 @@ export async function setContent(data) {
   }
 
   if (hasPostgres()) {
-    const sql = getSql();
-    await ensureSchema(sql);
-    const payload = JSON.stringify(data);
-    await sql`
-      INSERT INTO site_content (id, data, updated_at)
-      VALUES (1, CAST(${payload} AS jsonb), NOW())
-      ON CONFLICT (id) DO UPDATE SET data = EXCLUDED.data, updated_at = NOW()
-    `;
+    await db(
+      `INSERT INTO site_content (id, data, updated_at)
+       VALUES (1, $1::jsonb, NOW())
+       ON CONFLICT (id) DO UPDATE SET data = EXCLUDED.data, updated_at = NOW()`,
+      [JSON.stringify(data)]
+    );
     return;
   }
 
@@ -145,16 +144,15 @@ export async function setContent(data) {
 
 export async function getAuth() {
   if (hasPostgres()) {
-    const sql = getSql();
-    await ensureSchema(sql);
-    const rows = await sql`SELECT username, salt, hash, secret FROM site_auth LIMIT 1`;
+    const rows = await db("SELECT username, salt, hash, secret FROM site_auth LIMIT 1");
     if (rows[0]) return rows[0];
     const auth = defaultAuth();
-    await sql`
-      INSERT INTO site_auth (username, salt, hash, secret, updated_at)
-      VALUES (${auth.username}, ${auth.salt}, ${auth.hash}, ${auth.secret}, NOW())
-      ON CONFLICT (username) DO NOTHING
-    `;
+    await db(
+      `INSERT INTO site_auth (username, salt, hash, secret, updated_at)
+       VALUES ($1, $2, $3, $4, NOW())
+       ON CONFLICT (username) DO NOTHING`,
+      [auth.username, auth.salt, auth.hash, auth.secret]
+    );
     return auth;
   }
 
@@ -173,13 +171,12 @@ export async function getAuth() {
 
 export async function setAuth(auth) {
   if (hasPostgres()) {
-    const sql = getSql();
-    await ensureSchema(sql);
-    await sql`DELETE FROM site_auth`;
-    await sql`
-      INSERT INTO site_auth (username, salt, hash, secret, updated_at)
-      VALUES (${auth.username}, ${auth.salt}, ${auth.hash}, ${auth.secret}, NOW())
-    `;
+    await db("DELETE FROM site_auth");
+    await db(
+      `INSERT INTO site_auth (username, salt, hash, secret, updated_at)
+       VALUES ($1, $2, $3, $4, NOW())`,
+      [auth.username, auth.salt, auth.hash, auth.secret]
+    );
     return;
   }
 
