@@ -1,0 +1,16 @@
+{
+  "name": "Distinctive Nails",
+  "short_name": "Distinctive",
+  "description": "Luxury nail care and nail art in Summerville, South Carolina.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FBF7F4",
+  "theme_color": "#C17B88",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

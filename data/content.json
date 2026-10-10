@@ -1,0 +1,540 @@
+{
+  "site": {
+    "brandName": "Distinctive Nails",
+    "logoMark": "D",
+    "title": "Distinctive Nails — Nail Salon in Summerville, SC",
+    "description": "Luxurious nail care and nail art in a welcoming space. Book your manicure, pedicure, or nail art appointment at Distinctive Nails in Summerville, South Carolina.",
+    "phone": "(843) 688-5605",
+    "phoneTel": "+18436885605",
+    "email": "hello@distinctive-nails.com",
+    "addressLine1": "1915 State Road Unit D",
+    "addressLine2": "Summerville, SC 29486",
+    "city": "Summerville, South Carolina",
+    "hoursShort": "Mon–Sat 9:30 AM – 7:00 PM",
+    "hoursLong": "Monday–Saturday 9:30 AM – 7:00 PM",
+    "hoursSunday": "Sunday closed",
+    "bookingUrl": "https://distinctivenails.setmore.com/",
+    "instagramUrl": "https://www.instagram.com/distinctivenails.summerville/",
+    "instagramHandle": "@distinctivenails.summerville",
+    "facebookUrl": "https://www.facebook.com/distinctivenailssummerville/",
+    "footerTagline": "Luxury nail in Summerville South Carolina",
+    "topbarLeft": "Walk-ins welcome · Summerville, South Carolina",
+    "googleAdsId": "AW-18218903589",
+    "mapsQuery": "1915 State Road Unit D, Summerville, SC 29486",
+    "canonical": "https://distinctive-nails.com/"
+  },
+  "hero": {
+    "eyebrow": "Luxury meets comfort",
+    "title": "Your nails deserve the",
+    "accent": "best",
+    "subtitle": "Expert manicures, pedicures, and nail art in a welcoming space. We use premium products and take time to make you feel pampered.",
+    "primaryCta": "Book appointment",
+    "secondaryCta": "View service menu",
+    "image": "/images/hero.jpg",
+    "imageAlt": "Pink and blue polka-dot stiletto nail art",
+    "salonImage": "/images/salon-1.jpg",
+    "salonAlt": "Bright reception at Distinctive Nails with polish wall and rattan seating",
+    "badgeValue": "4.4",
+    "badgeLabel": "Google rating · Summerville"
+  },
+  "marquee": [
+    "Dip powder",
+    "Gel-X",
+    "Acrylic",
+    "Manicure",
+    "Pedicure",
+    "Nail art",
+    "Waxing",
+    "Kids services"
+  ],
+  "about": {
+    "enabled": true,
+    "eyebrow": "About us",
+    "heading": "Distinctive Nails — where beauty meets precision",
+    "paragraph1": "At Distinctive Nails, we believe your nails are a reflection of your personal style and confidence. Our salon offers a relaxing and modern environment where skilled technicians provide high-quality nail care services, from classic manicures and pedicures to the latest nail art trends.",
+    "paragraph2": "We are committed to using premium products, maintaining strict hygiene standards, and delivering exceptional customer service. Whether you’re looking for a simple, elegant look or a bold, creative design, Distinctive Nails is your go-to destination for beauty, relaxation, and self-care.",
+    "points": [
+      "Premium products",
+      "Strict hygiene",
+      "Walk-ins welcome",
+      "Cane Bay / Summerville"
+    ],
+    "imageA": "/images/salon-2.jpg",
+    "imageAAlt": "Pedicure lounge at Distinctive Nails",
+    "imageB": "/images/g-18.jpeg",
+    "imageBAlt": "Pink bow and zebra print nail design"
+  },
+  "services": {
+    "enabled": true,
+    "eyebrow": "What we do",
+    "heading": "Services designed to pamper",
+    "sub": "From a classic polish change to a full Distinctive pedicure — we take time with every set.",
+    "items": [
+      {
+        "title": "Nails & dip powder",
+        "text": "Full sets, French, builder gel, Gel-X, ombre, and acrylic with gel polish.",
+        "from": "From $45"
+      },
+      {
+        "title": "Manicure",
+        "text": "Classic, paraffin, and gel/shellac manicures for a clean, lasting finish.",
+        "from": "From $25"
+      },
+      {
+        "title": "Pedicure",
+        "text": "Classic through Volcano — including Deluxe, CODI, and our signature Distinctive pedicure.",
+        "from": "From $38"
+      },
+      {
+        "title": "Nail art",
+        "text": "Custom design, cat-eye, French tip, length, and repairs finished with care.",
+        "from": "From $5"
+      },
+      {
+        "title": "Waxing",
+        "text": "Brow, lip, chin, and face waxing in a comfortable, private setting.",
+        "from": "From $12"
+      },
+      {
+        "title": "Kids",
+        "text": "Gentle manicures, pedicures, combos, polish changes, and gel for little guests.",
+        "from": "From $12"
+      }
+    ]
+  },
+  "menu": {
+    "enabled": true,
+    "eyebrow": "Price menu",
+    "heading": "Service menu",
+    "sub": "Transparent pricing. Add-ons and designs are quoted in salon.",
+    "categories": [
+      {
+        "id": "nails",
+        "label": "Nails",
+        "groups": [
+          {
+            "name": "Nails — dip powder",
+            "items": [
+              {
+                "name": "Full set",
+                "price": "$52 – $57"
+              },
+              {
+                "name": "French",
+                "price": "$63"
+              },
+              {
+                "name": "Builder / hard gel",
+                "price": "$70"
+              },
+              {
+                "name": "W. gel + polish",
+                "price": "$65"
+              },
+              {
+                "name": "Acrylic + gel polish",
+                "price": "Full set $45 – $60\nFill-in $40 – $50"
+              },
+              {
+                "name": "Gel-X",
+                "price": "$70"
+              },
+              {
+                "name": "Ombre",
+                "price": "$70"
+              },
+              {
+                "name": "French tip",
+                "price": "$8"
+              },
+              {
+                "name": "Removal",
+                "price": "$15"
+              },
+              {
+                "name": "Cut down",
+                "price": "$3"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "mani",
+        "label": "Mani / Pedi",
+        "groups": [
+          {
+            "name": "Manicure",
+            "items": [
+              {
+                "name": "Classic",
+                "price": "$25"
+              },
+              {
+                "name": "Paraffin",
+                "price": "$37"
+              },
+              {
+                "name": "Gel / shellac",
+                "price": "$45"
+              }
+            ]
+          },
+          {
+            "name": "Pedicure",
+            "items": [
+              {
+                "name": "Classic",
+                "price": "$38 – $55"
+              },
+              {
+                "name": "Deluxe",
+                "price": "$50 – $68"
+              },
+              {
+                "name": "CODI",
+                "price": "$57 – $75"
+              },
+              {
+                "name": "Distinctive",
+                "price": "$62 – $80"
+              },
+              {
+                "name": "Volcano",
+                "price": "$70 – $90"
+              }
+            ]
+          },
+          {
+            "name": "Add-ons",
+            "items": [
+              {
+                "name": "Paraffin",
+                "price": "$10"
+              },
+              {
+                "name": "Hot stone",
+                "price": "$10"
+              },
+              {
+                "name": "Socks / gloves collagen",
+                "price": "$12"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "wax",
+        "label": "Waxing",
+        "groups": [
+          {
+            "name": "Waxing",
+            "items": [
+              {
+                "name": "Eyebrow",
+                "price": "$14"
+              },
+              {
+                "name": "Lip",
+                "price": "$12"
+              },
+              {
+                "name": "Chin",
+                "price": "$15"
+              },
+              {
+                "name": "Face",
+                "price": "$45"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "extra",
+        "label": "Additional",
+        "groups": [
+          {
+            "name": "Additional services",
+            "items": [
+              {
+                "name": "Polish change (toes / fingers)",
+                "price": "$15 – $18"
+              },
+              {
+                "name": "Gel polish",
+                "price": "$30"
+              },
+              {
+                "name": "Nail design",
+                "price": "$5 & up"
+              },
+              {
+                "name": "Nail repair",
+                "price": "$3"
+              },
+              {
+                "name": "Cut down",
+                "price": "$3 & up"
+              },
+              {
+                "name": "Length",
+                "price": "$5 & up"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "kids",
+        "label": "Kids",
+        "groups": [
+          {
+            "name": "Pedicure",
+            "items": [
+              {
+                "name": "Under 10",
+                "price": "$30"
+              },
+              {
+                "name": "Age 7",
+                "price": "$25"
+              }
+            ]
+          },
+          {
+            "name": "Manicure",
+            "items": [
+              {
+                "name": "Under 10",
+                "price": "$15"
+              },
+              {
+                "name": "Age 6",
+                "price": "$12"
+              }
+            ]
+          },
+          {
+            "name": "Combo & extras",
+            "items": [
+              {
+                "name": "Combo",
+                "price": "$30"
+              },
+              {
+                "name": "Polish change",
+                "price": "$8"
+              },
+              {
+                "name": "Gel",
+                "price": "$20"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "gallery": {
+    "enabled": true,
+    "eyebrow": "Gallery",
+    "heading": "Recent sets",
+    "sub": "Follow {instagram} for daily work.",
+    "filters": [
+      {
+        "id": "all",
+        "label": "All"
+      },
+      {
+        "id": "featured",
+        "label": "Home favorites"
+      },
+      {
+        "id": "cateye",
+        "label": "Cat eye"
+      },
+      {
+        "id": "design",
+        "label": "Design"
+      }
+    ],
+    "images": [
+      {
+        "src": "/images/g-01.jpg",
+        "alt": "Green, floral, and checkerboard nail art",
+        "categories": [
+          "featured"
+        ]
+      },
+      {
+        "src": "/images/g-02.jpg",
+        "alt": "Nail art set from Distinctive Nails",
+        "categories": [
+          "featured"
+        ]
+      },
+      {
+        "src": "/images/g-03.jpg",
+        "alt": "Nail art set from Distinctive Nails",
+        "categories": [
+          "featured"
+        ]
+      },
+      {
+        "src": "/images/g-04.jpg",
+        "alt": "Nail art set from Distinctive Nails",
+        "categories": []
+      },
+      {
+        "src": "/images/g-05.jpg",
+        "alt": "Nail art set from Distinctive Nails",
+        "categories": []
+      },
+      {
+        "src": "/images/g-06.jpg",
+        "alt": "Nail art set from Distinctive Nails",
+        "categories": []
+      },
+      {
+        "src": "/images/g-07.jpg",
+        "alt": "Cat-eye nail design",
+        "categories": [
+          "cateye"
+        ]
+      },
+      {
+        "src": "/images/g-08.jpg",
+        "alt": "Cat-eye nail design",
+        "categories": [
+          "cateye"
+        ]
+      },
+      {
+        "src": "/images/g-09.jpg",
+        "alt": "Cat-eye nail design",
+        "categories": [
+          "cateye"
+        ]
+      },
+      {
+        "src": "/images/g-10.jpg",
+        "alt": "Cat-eye nail design",
+        "categories": [
+          "cateye"
+        ]
+      },
+      {
+        "src": "/images/g-11.jpg",
+        "alt": "Cat-eye nail design",
+        "categories": [
+          "cateye"
+        ]
+      },
+      {
+        "src": "/images/g-12.jpg",
+        "alt": "Cat-eye nail design",
+        "categories": [
+          "cateye"
+        ]
+      },
+      {
+        "src": "/images/g-13.jpg",
+        "alt": "Cat-eye nail design",
+        "categories": [
+          "cateye"
+        ]
+      },
+      {
+        "src": "/images/g-14.jpg",
+        "alt": "Custom nail design",
+        "categories": [
+          "design"
+        ]
+      },
+      {
+        "src": "/images/g-15.jpeg",
+        "alt": "Custom nail design",
+        "categories": [
+          "design"
+        ]
+      },
+      {
+        "src": "/images/g-16.jpeg",
+        "alt": "Custom nail design",
+        "categories": [
+          "design"
+        ]
+      },
+      {
+        "src": "/images/g-17.jpeg",
+        "alt": "Pink and blue polka-dot stiletto nails",
+        "categories": [
+          "featured",
+          "design"
+        ]
+      },
+      {
+        "src": "/images/g-18.jpeg",
+        "alt": "Pink bow, zebra, and pearl nail art",
+        "categories": [
+          "featured",
+          "design"
+        ]
+      },
+      {
+        "src": "/images/g-19.jpeg",
+        "alt": "Custom nail design",
+        "categories": [
+          "featured",
+          "design"
+        ]
+      },
+      {
+        "src": "/images/g-20.jpeg",
+        "alt": "Custom nail design",
+        "categories": [
+          "design"
+        ]
+      }
+    ]
+  },
+  "reviews": {
+    "enabled": true,
+    "eyebrow": "What clients say",
+    "heading": "Kind words",
+    "items": [
+      {
+        "quote": "Best Nails feels like a treat every time. The team is so warm and the results are always perfect. I won't go anywhere else.",
+        "author": "Maria K.",
+        "role": "Regular client"
+      },
+      {
+        "quote": "Cathy is detail oriented with the nail shaping, remembers who I am, and there hasn’t been a design that she hasn’t knocked out of the park yet.",
+        "author": "Danielle",
+        "role": "Google review"
+      },
+      {
+        "quote": "Winnie was wonderful. My nails look beautiful.",
+        "author": "Patricia D.",
+        "role": "Google review"
+      }
+    ]
+  },
+  "gift": {
+    "enabled": true,
+    "eyebrow": "Gift card",
+    "heading": "Give the gift of a perfect set",
+    "text": "Distinctive Nails gift cards are available in salon. Call us or stop by at 1915 State Road Unit D — we’ll help you choose an amount they’ll actually use.",
+    "primaryCta": "Call {phone}",
+    "secondaryCta": "Get directions"
+  },
+  "visit": {
+    "enabled": true,
+    "eyebrow": "Contact us",
+    "heading": "Come see us in Summerville",
+    "text": "Luxury nail in Summerville, South Carolina. Book online or walk in when we have space.",
+    "bookCta": "Book on Setmore"
+  }
+}
